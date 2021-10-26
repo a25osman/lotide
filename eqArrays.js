@@ -18,11 +18,11 @@ const eqArrays = function(actual, expected) {
     check = false;
   }
 
-  if (check === true) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
+  // if (check === true) {
+  //   console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
+  // } else {
+  //   console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  // }
   return check;
 };
 
@@ -30,4 +30,4 @@ const eqArrays = function(actual, expected) {
 // TEST CODE
 //assertEqual("Lighthouse Labs", "Bootcamp");
 //assertEqual(1, 1);
-//assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
