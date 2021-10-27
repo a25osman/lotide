@@ -19,21 +19,17 @@ const assertArraysEqual = function(actual, expected) {
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
-
 };
 
-const flatten = function (list) {
-  let fin = [];
-  for (let i = 0; i < list.length; i++) {
-    if (Array.isArray(list[i]) === true) {
-      for (let val of list[i]) {
-        fin.push(val);
-      }
-    } else {
-      fin.push(list[i]);
-    }
+// ACTUAL FUNCTION
+const middle = function(array) {
+  let res = [];
+  const len = array.length;
+  if (len % 2 === 0 && len > 2) {
+    res.push(array[len / 2 - 1]);
+    res.push(array[len / 2]);
+  } else if (len % 2 !== 0 && len > 2) {
+    res.push(array[Math.floor(len / 2)]);
   }
-  return fin;
+  return res;
 };
-
-// console.log(flatten([1, 2, [3, 4], 5, [6,7,8,9,10]]));
